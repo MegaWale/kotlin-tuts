@@ -20,8 +20,8 @@ fun main(args: Array<String>) {
     } else {
         println("CAST!!!!!!!!!!!!!!!!!!")
     }
-    println("Hello ${name} and ${lastName} indexing ${array[2]} and ${array2[2]}")
-    println("My dog's name is ${dogName} with number ${code} and character ${yinYang}")
+    println("Hello $name and $lastName indexing ${array[2]} and ${array2[2]}")
+    println("My dog's name is $dogName with number $code and character $yinYang")
 
     for (i in array) {
         println(i)
@@ -34,7 +34,20 @@ fun main(args: Array<String>) {
     println("${array}")
 
 
+    for (i in 1..5) println(i)
+    for (i in 'b'..'g') println(i)
 
+    val weight = 52
+    val healthy = 50..75
+
+    if (weight in healthy)
+        println("${weight} is in $healthy range")
+
+    val c = 'k'
+    val alphabet = 'a'..'z'
+
+    if (c in alphabet)
+        println("$c is character")
 
 
 
