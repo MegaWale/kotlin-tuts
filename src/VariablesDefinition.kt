@@ -47,7 +47,121 @@ fun main(args: Array<String>) {
     val alphabet = 'a'..'z'
 
     if (c in alphabet)
-        println("$c is character")
+        println("$c is in character")
+
+    for (i in  5..1) print(i)
+
+    for (i in 50 downTo 1) print(i)
+    println()
+    for (i in 3..100 step 15) print(i)
+
+    val x = 5
+    println(if(x > 10) "greater" else "smaller")
+
+    when (x) {
+        1 -> print("x == 1")
+        2 -> print("x == 2")
+        else -> println("x is neither 1 nor 2")
+    }
+
+    val vehicle = "Bike"
+
+    val message = when (vehicle) {
+        "Car" -> {
+            "Four wheeler"
+        }
+        "Bike" -> {
+            "Two wheels"
+        }
+        else -> {
+            "Unknown number of wheels"
+        }
+    }
+    println(message)
+
+    when (vehicle) {
+        "Car", "Bike" -> print("Vehicle")
+        else -> print("Unidentified fanny object")
+    }
+
+
+//    val name = when (person) {
+//        is String -> person.toUpperCase()
+//        is User -> person.name
+//        //Code is smart casted to String, so we can
+//        //call String class methods
+//        //...
+//    }
+
+
+    val riskAssessment = 80
+    val handleStrategy = "Warn"
+
+    val risk = when (riskAssessment) {
+        in 1..20 -> print("negligible risk")
+        !in 21..40 -> print("minor risk")
+        !in 41..60 -> print("major risk")
+        else -> when (handleStrategy){
+            "Warn" -> "Risk assessment warning"
+            "Ignore" -> "Risk ignored"
+            else -> "Unknown risk!"
+        }
+    }
+    println(risk)
+
+    private fun getPasswordErrorId(password: String) = when {
+        password.isEmpty() -> R.string.error_field_required
+        passwordInvalid(password) -> R.string.error_invalid_password
+        else -> null
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
