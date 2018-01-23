@@ -109,11 +109,97 @@ fun main(args: Array<String>) {
     }
     println(risk)
 
-    private fun getPasswordErrorId(password: String) = when {
-        password.isEmpty() -> R.string.error_field_required
-        passwordInvalid(password) -> R.string.error_invalid_password
-        else -> null
+//    private fun getPasswordErrorId(password: String) = when {
+//        password.isEmpty() -> R.string.error_field_required
+//        passwordInvalid(password) -> R.string.error_invalid_password
+//        else -> null
+//    }
+
+
+    val range = 1..6
+
+    for(i in range) {
+        print("$i ")
+        if (i == 3)
+            break
+    } // prints: 1 2 3
+
+    val intRange1 = 1..6
+    val charRange1 = 'A'..'B'
+    for(value in intRange1) {
+        if(value == 3)
+            continue
+        println("Outer loop: $value ")
+        for (char in charRange1) {
+            println("\tInner loop: $char ")
+        }
+    } /* prints
+    Outer loop: 1
+        Inner loop: A
+        Inner loop: B
+    Outer loop: 2
+        Inner loop: A
+        Inner loop: B
+    Outer loop: 4
+        Inner loop: A
+        Inner loop: B
+    Outer loop: 5
+        Inner loop: A
+        Inner loop: B */
+
+
+    for(value in intRange1) {
+        for (char in charRange1) {
+            // How can we break outer loop here?
+        }
     }
+
+    val charRange = 'A'..'B'
+    val intRange = 1..6
+
+    outer@ for(value in intRange) {
+        println("Outer loop: $value ")
+        for (char in charRange) {
+            if(char == 'B')
+                break@outer
+            println("\tInner loop: $char ")
+        }
+    } /* prints
+    Outer loop: 1
+    Inner loop: A */
+
+    fun doSth() {
+        val charRange = 'A'..'B'
+        val intRange = 1..6
+
+        for(value in intRange) {
+            println("Outer loop: $value ")
+
+            for (char in charRange) {
+                println("\tInner loop: $char ")
+                return
+            }
+        }
+    } //usage
+    println("Before method call")
+    doSth()
+    println("After method call")
+
+    // prints
+//    Outer loop: 1
+//        Inner loop: A
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
