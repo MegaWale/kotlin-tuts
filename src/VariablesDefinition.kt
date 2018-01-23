@@ -187,69 +187,6 @@ fun main(args: Array<String>) {
 
     // prints
 //    Outer loop: 1
-//        Inner loop: A
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 //    fun setView(view: View?) {
 //        view ?: throw RuntimeException("View is empty")
