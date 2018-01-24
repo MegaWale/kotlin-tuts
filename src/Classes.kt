@@ -2,6 +2,7 @@ import javafx.scene.text.FontWeight
 import java.awt.Button
 
 fun main(args: Array<String>) {
+/*
 
     // Using secondary constructor: getters and setters
     class Person {
@@ -190,9 +191,18 @@ fun main(args: Array<String>) {
     //        B
     //        ItemsAB
 
+    //normal class
+    class Product(var name: String, var price: Double)
 
+    //data class
+    data class Product(var name: String, var price: Double)
 
+    class ProductDetailActivity {
+        companion object {
 
+        }
+    }
+*/
 
 
 
