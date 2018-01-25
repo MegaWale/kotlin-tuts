@@ -1,11 +1,11 @@
 fun main(args: Array<String>) {
 
-    fun addCache(function: (Int) -> Int): (Int) -> Int {
-        //code
-    }
-
-    val fibonacciNumber: (Int)-> Int = // function implementation
-    val fibonacciNumberWithCache = addCache { fibonacciNumber }
+//    fun addCache(function: (Int) -> Int): (Int) -> Int {
+//        //code
+//    }
+//
+//    val fibonacciNumber: (Int)-> Int = // function implementation
+//    val fibonacciNumberWithCache = addCache { fibonacciNumber }
 
 
     /*val TAG = "MainActivity"

@@ -12,7 +12,7 @@ fun main(args: Array<String>) {
 
     println(customerResponse)
 
-    enum class Color(val r: Int, val g: Int, val b: Int) {
+    /*enum class Color(val r: Int, val g: Int, val b: Int) {
         BLUE(0, 0, 255),
         ORANGE(255, 165, 0),
         GRAY(49, 79, 79),
@@ -61,14 +61,14 @@ fun main(args: Array<String>) {
     println(Colour.BLUE.temperature) //prints: COLD
     println(Colour.ORANGE.temperature) //prints: WARM
     println(Colour.GRAY.temperature) //prints: NEUTRAL
+*/
 
-
-    internal class Fruit private constructor {
+ /*   internal class Fruit private constructor {
         var weight: Double? = null
         companion object {
             fun create() = Fruit()
         }
-    }
+    }*/
 
 
 
