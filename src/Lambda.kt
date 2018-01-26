@@ -55,9 +55,13 @@ inline fun foo(before: ()->Unit, noinline f: ()->Unit) {//1
     boo(f) //3
 }
 
+fun forEach(list: List<Int>, body: (Int) -> Unit) {
+    for (i in list) body(i)
+}
 
-
-
+//Usage
+val list = listOf(1,2,3,4,5)
+forEach(list) { print(it) }// Prints: 12345
 
 
 
