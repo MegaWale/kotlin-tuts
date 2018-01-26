@@ -1,3 +1,4 @@
+/*
 import java.math.BigDecimal
 import java.util.concurrent.atomic.DoubleAccumulator
 private fun fold(
@@ -209,4 +210,4 @@ class Math {
 // Usage
 val evenPredicate: (Int)->Boolean = MathHelpers::isEven
 val oddPredicate: (Int)->Boolean = Math.Companion::isOdd
-val numbers = 1..10
+val numbers = 1..10*/
