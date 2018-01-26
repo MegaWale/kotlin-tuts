@@ -196,3 +196,17 @@ for (task in todoList) {
 }
 
 // Prints: Hello! Have a nice day
+
+object MathHelpers {
+    fun isEven(i: Int) = i % 2 == 0
+}
+
+class Math {
+    companion object {
+        fun isOdd(i: Int) = i % 2 == 1
+    }
+}
+// Usage
+val evenPredicate: (Int)->Boolean = MathHelpers::isEven
+val oddPredicate: (Int)->Boolean = Math.Companion::isOdd
+val numbers = 1..10
