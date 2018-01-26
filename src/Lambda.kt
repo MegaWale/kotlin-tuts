@@ -12,18 +12,6 @@ private fun fold(
     return acc
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
 data class User(val name: String, val surname: String)
 typealias Users = List<User>
 typealias Weight = Double
@@ -57,6 +45,20 @@ fun measureOperation() {
         longOperation()
     }
 }
+
+fun boo(f:()->Unit) {
+    //...
+}
+
+inline fun foo(before: ()->Unit, noinline f: ()->Unit) {//1
+    before()//2
+    boo(f) //3
+}
+
+
+
+
+
 
 
 
