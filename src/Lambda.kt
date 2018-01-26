@@ -11,6 +11,57 @@ private fun fold(
     }
     return acc
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+data class User(val name: String, val surname: String)
+typealias Users = List<User>
+typealias Weight = Double
+typealias Length = Int
+
+
+val users: Users = listOf(
+        User("Olawale", "Matt"),
+        User("Igor", "Woo")
+)
+
+fun calculatePrice(length: Length) {
+     //...
+}
+calculatePrice(10)
+
+val weight: Weight = 54.2
+val lenght: Length = 34
+
+
+inline fun printExecutionTime(f: ()-> Unit) {
+    val startTime = System.currentTimeMillis()
+    f()
+    val endTime = System.currentTimeMillis()
+    println("It took " + (endTime - startTime))
+}
+
+
+fun measureOperation() {
+    printExecutionTime {
+        longOperation()
+    }
+}
+
+
+
+
+
 fun main(args: Array<String>) {
 
 
@@ -75,8 +126,47 @@ fun main(args: Array<String>) {
             onFinish = { view.loadingProgress = true }
     )
 
+    fun addLogs(tag: String, f: ()-> Unit) {
+        println("$tag started")
+        val startTime = System.currentTimeMillis()
+        f()
+        val endTime = System.currentTimeMillis()
+        println("$tag finished. It took " + (endTime - startTime))
+    }
+
+    //Usage
+
+    addLogs("Some operations") {
+        // Operations we are measuring
+    }
+
+    //Example of execution
+    addLogs("Sleeper"){
+        Thread.sleep(1000L)
+    }
+
+    //Output
+
+//    Sleeper started
+//    Sleeper finished. It took 1001
 
 
 
 
+
+
+
+
+
+
+}
+
+public fun thread(
+        start: Boolean = true,
+        isDaemon: Boolean = false,
+        contextClassLoader: ClassLoader? = null,
+        name: String? = null,
+        priority: Int = -1,
+        block: () -> Unit): Thread {
+    // implementation
 }
