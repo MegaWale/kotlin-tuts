@@ -50,7 +50,7 @@ fun boo(f:()->Unit) {
     //...
 }
 
-inline fun foo(before: ()->Unit, noinline f: ()->Unit) {//1
+inline fun fooe(before: ()->Unit, noinline f: ()->Unit) {//1
     before()//2
     boo(f) //3
 }
@@ -64,7 +64,13 @@ val list = listOf(1,2,3,4,5)
 forEach(list) { print(it) }// Prints: 12345
 
 
+fun boo(f:()->Unit) {
+    //...
+}
 
+inline fun foo(crossinline f: () -> Unit) {
+    boo { println("A"); f() }
+}
 
 
 
@@ -176,3 +182,17 @@ public fun thread(
         block: () -> Unit): Thread {
     // implementation
 }
+
+fun greet(){
+    print("Hello! ")
+}
+fun salute(){
+    print("Have a nice day ")
+}
+
+val todoList: List<() -> Unit> = listOf(::greet, ::salute)
+for (task in todoList) {
+    task()
+}
+
+// Prints: Hello! Have a nice day
