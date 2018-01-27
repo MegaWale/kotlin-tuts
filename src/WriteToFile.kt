@@ -30,7 +30,6 @@ fun WriteToFile(message: String) {
 
 fun readFile() {
     var reader = FileReader("message.txt")
-    var readMessage: String? = null
     var char: Int?
 
     try {
