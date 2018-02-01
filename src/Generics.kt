@@ -25,11 +25,11 @@ fun main(args: Array<String>) {
     open class Animal
     class Dog: Animal()
 
-    var animalBox = Box<Animal>()
+    /*var animalBox = Box<Animal>()
     var dogBox = Box<Dog>()
 
     animalBox = dogBox //2, error
-    dogBox = animalBox //1, error
+    dogBox = animalBox //1, error*/
 
 
 
