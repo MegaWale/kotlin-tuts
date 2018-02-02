@@ -30,6 +30,10 @@ fun main(srgs: Array<String>) {
 
     greet("reader") // Prints: Hello, reader
 
+    infix fun <A, B> A.to(that: B): Pair<A, B> = Pair(this, that)
 
+    infix fun <T> List<T>.intersection(other: List<T>) = filter { it in other }
+
+    listOf(1, 2, 3) intersection listOf(2, 3, 4)
 
 }
