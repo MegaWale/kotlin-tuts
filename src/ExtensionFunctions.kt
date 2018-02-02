@@ -16,4 +16,20 @@ fun main(srgs: Array<String>) {
 
     println(number)
 
+    var text = "hello {name}"
+
+    fun correctStyle(text: String) = text
+            .replace("hello", "hello,")
+
+    fun greet(name: String) {
+        text.replace("{name}", name)
+                .let { correctStyle(it) }
+                .capitalize()
+                .let {  print(it) }
+    }
+
+    greet("reader") // Prints: Hello, reader
+
+
+
 }
