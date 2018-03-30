@@ -1,3 +1,5 @@
+package JavaWork;
+
 public class GettersAndSetters {
 
     private int size;

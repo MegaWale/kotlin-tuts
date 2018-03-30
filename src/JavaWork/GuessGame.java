@@ -1,3 +1,5 @@
+package JavaWork;
+
 public class GuessGame {
     Player p1;
     Player p2;
@@ -27,13 +29,13 @@ public class GuessGame {
             p3.guess();
 
             guessp1 = p1.number;
-            System.out.println("Player one guessed " + guessp1);
+            System.out.println("JavaWork.Player one guessed " + guessp1);
 
             guessp2 = p2.number;
-            System.out.println("Player two guessed " + guessp2);
+            System.out.println("JavaWork.Player two guessed " + guessp2);
 
             guessp3 = p3.number;
-            System.out.println("Player one guessed " + guessp3);
+            System.out.println("JavaWork.Player one guessed " + guessp3);
 
             if (guessp1 == targetNumber) {
                 p1isRight = true;
@@ -48,9 +50,9 @@ public class GuessGame {
             if (p1isRight || p2isRight || p3isRight) {
 
                 System.out.println("We have a winner!");
-                System.out.println("Player one got it right? " + p1isRight);
-                System.out.println("Player two got it right? " + p2isRight);
-                System.out.println("Player three got it right? " + p2isRight);
+                System.out.println("JavaWork.Player one got it right? " + p1isRight);
+                System.out.println("JavaWork.Player two got it right? " + p2isRight);
+                System.out.println("JavaWork.Player three got it right? " + p2isRight);
                 System.out.println("Game is over.");
                 break;
             } else {

@@ -1,3 +1,5 @@
+package JavaWork;
+
 public class Dog {
 
     private String name;
@@ -15,10 +17,10 @@ public class Dog {
         two.bark();
         three.bark();
 
-        /*Dog[] myDogs = new Dog[3];
+        /*JavaWork.Dog[] myDogs = new JavaWork.Dog[3];
 
-        myDogs[0] = new Dog();
-        myDogs[1] = new Dog();
+        myDogs[0] = new JavaWork.Dog();
+        myDogs[1] = new JavaWork.Dog();
         myDogs[2] = dog1;
 
         myDogs[0].name = "Fred";

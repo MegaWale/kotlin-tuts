@@ -1,3 +1,5 @@
+package JavaWork;
+
 public class GoodDogTestDrive {
 
     public static void main ( String[] args ) {
@@ -5,8 +7,8 @@ public class GoodDogTestDrive {
         one.setSize(70);
         GettersAndSetters two = new GettersAndSetters();
         two.setSize(8);
-        System.out.println("Dog one: " + one.getSize());
-        System.out.println("Dog two: " + two.getSize());
+        System.out.println("JavaWork.Dog one: " + one.getSize());
+        System.out.println("JavaWork.Dog two: " + two.getSize());
         one.bark();
         two.bark();
 

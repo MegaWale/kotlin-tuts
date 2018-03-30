@@ -26,7 +26,7 @@ fun main(args: Array<String>) {
     class Dog: Animal()
 
     /*var animalBox = Box<Animal>()
-    var dogBox = Box<Dog>()
+    var dogBox = Box<JavaWork.Dog>()
 
     animalBox = dogBox //2, error
     dogBox = animalBox //1, error*/
